@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.98.0">
-    <title>Album example · Bootstrap v5.2</title>
+    <title>My awesome blog<</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/album/">
 
@@ -76,17 +76,14 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-light fst-italic" style="background-color: #efc07a">
     <div class="container-fluid">
-    <a class="navbar-brand" href="#">My awesome blog</a>
+    <a class="navbar-brand" href="{% url 'home' %}">My awesome blog</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">About me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Facebook</a>
+          <a class="nav-link" target="_blank" rel="noopener noreferrer" href="https://vk.com/id8450696">Facebook</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="#">Blog</a>
@@ -108,7 +105,7 @@
                 {% for post in posts.all %}
                     <div class="col-12">
                         <div class="card shadow-sm">
-                            <a href="">
+                            <a href="{% url 'post_details' post.id %}">
                                 <h3 class="p-2">{{ post.title }}</h3>
                             </a>
                             <img class="img-fluid ps-2" src="{{ post.image.url }}" height="400" width="400">
